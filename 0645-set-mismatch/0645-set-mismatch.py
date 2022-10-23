@@ -1,9 +1,16 @@
 class Solution(object):
     def findErrorNums(self, nums):
-        n=len(nums)
-        s=sum(set(nums))
         
-        return[sum(nums)-s,n*(n+1)//2 - s]
+        n = len(nums)
+        s = n*(n+1)//2
+        miss = s - sum(set(nums))
+        duplicate = sum(nums) + miss - s
+        return [duplicate, miss]
+        
+#         n=len(nums)
+#         s=sum(set(nums))
+        
+#         return[sum(nums)-s,n*(n+1)//2 - s]
 #         a,b=0,0
 #         res=Counter(nums)
 #         for i in res:
