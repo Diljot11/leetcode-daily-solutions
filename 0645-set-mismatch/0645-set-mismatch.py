@@ -1,17 +1,20 @@
 class Solution(object):
     def findErrorNums(self, nums):
-        a,b=0,0
-        res=Counter(nums)
-        for i in res:
-            if res[i]==2:
-                a=i
-                break
-        for i in range(len(nums)):
+        n=len(nums)
+        
+        return[sum(nums)-sum(set(nums)),n*(n+1)//2-sum(set(nums))]
+#         a,b=0,0
+#         res=Counter(nums)
+#         for i in res:
+#             if res[i]==2:
+#                 a=i
+#                 break
+#         for i in range(len(nums)):
             
-            if nums.count(i+1)==0:
-                b=i+1
-                break
-        return [a,b]
+#             if nums.count(i+1)==0:
+#                 b=i+1
+#                 break
+#         return [a,b]
             
         
         
