@@ -5,10 +5,8 @@ class Solution(object):
             if len(set(a)) < len(a): continue
             a = set(a)
             # print a,dp
-            for c in dp[:]:
-                if a & c: 
-                    # print a,c, a|c
-                    continue
+            for c in dp:
+                if a & c: continue
                 
                 dp.append(a | c)
         return max(len(a) for a in dp)
